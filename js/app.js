@@ -3,12 +3,13 @@ console.log('app.js is connected.');
 
 
 let form = document.getElementById('new-pet-form');
+console.log('🚀 ~ file: app.js:6 ~ form', form);
 // console.log('do we get a form? ',form);
 
 
 
 
-let petArray = [];
+// let petArray = [];
 
 function Pet(petName, breed, imageName, interests, isGoodWithKids, isGoodWithDogs, isGoodWithCats){
   this.petName = petName;
@@ -18,7 +19,7 @@ function Pet(petName, breed, imageName, interests, isGoodWithKids, isGoodWithDog
   this.isGoodWithKids = isGoodWithKids;
   this.isGoodWithDogs = isGoodWithDogs;
   this.isGoodWithCats = isGoodWithCats;
-  petArray.push(this);
+  // petArray.push(this);
 }
 
 
@@ -107,10 +108,12 @@ let allPets = [firstPet, secondPet, thirdPet];
 for(let i = 0; i < allPets.length; i++){
 
   allPets[i].render();
-  // let paraParent = document.getElementById('footer');
-  // let newParagraph = document.createElement('p');
-  // newParagraph.textContent = `A nice kitten to code with is ${allPets[i].petName} because they are good at ${allPets[i].interests} .` ;
-  // paraParent.appendChild(newParagraph);
+  let paraParent = document.getElementById('footer');
+  let newParagraph = document.createElement('p');
+  console.log('🚀 ~ file: app.js:113 ~ newParagraph:', newParagraph);
+
+  newParagraph.textContent = `A nice kitten to code with is ${allPets[i].petName} because they are good at ${allPets[i].interests} .` ;
+  paraParent.appendChild(newParagraph);
 }
 
 
@@ -126,7 +129,7 @@ function handleFormSubmitted(event){
   //got the name
   const petName = event.target.name.value;
   console.log('did we get a pet name?', petName);
-  //breed 
+  //breed
   let breedInput = document.getElementById('breed');
   // bracket notation
   let breedValue   = breedInput['value'];
