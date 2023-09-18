@@ -93,7 +93,7 @@ for(let i = 0; i < petOne.interests.length; i++){
 
 //create img
 let petOneImage = document.createElement('img');
-{/* <img src="image/diabloBlanco.jpeg" */}
+/* <img src="image/diabloBlanco.jpeg" */
 petOneImage.setAttribute('src', 'images/' + petOne.imageName + '.jpeg');
 petOneImage.setAttribute('alt', 'Adopt our pet kittens');
 article.appendChild(petOneImage);
