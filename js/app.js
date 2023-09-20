@@ -160,9 +160,6 @@ function handleFormSubmitted(event){
   let form = document.getElementById('new-pet-form');
   form.reset();
 
-
-
-
 }
 
 
